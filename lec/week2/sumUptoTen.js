@@ -1,3 +1,9 @@
+// npm init -y
+// npm i express
+
+
+
+
 
 const express = require('express')
 const app = express()
