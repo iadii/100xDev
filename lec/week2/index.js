@@ -1,13 +1,7 @@
-// npm init -y
-// npm i express
-
-
 const express = require('express')
-const app = express()
-// const port = 5173
-const port = 3000
 
-
+const app = express();
+const port = 442;
 function calculateSum(count){
 
     let sum = 0;
@@ -24,15 +18,13 @@ function handleFirstRequest(req, res){
     let ans = `calculated sum is ${calculatedSum}`
     
     res.send(ans)
-
-
 }
 
-app.get('/', handleFirstRequest)
 
-const started = () => {
-    console.log(`Example app listening on port ${port}`)
-  }
-  
-app.listen(port, started)
 
+app.get('/handleSum', handleFirstRequest)
+
+
+app.listen(port, () => {
+    console.log(`port is running at ${port}`);
+})
