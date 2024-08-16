@@ -1,7 +1,13 @@
 const express = require('express')
 const app = express();
 
-const port = 441;
+// const port = 5173;
+// module.exports = { port };
+function getPort() {
+    return 5173;
+}
+module.exports = { getPort }
+port = getPort();
 
 /*
  app.get('/z900', (req, res) => {
