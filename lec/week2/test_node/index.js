@@ -1,3 +1,4 @@
+
 const express = require('express')
 const app = express();
 
@@ -26,6 +27,6 @@ const app = express();
 //     res.send(hello)
 //  })
 
-app.listen(process.env.PORT || 4000 , () => {
-    console.log(`Server is running at http://localhost:${port}`);
+app.listen(4000 , () => {
+    console.log(`Server is running at http://localhost:`);
 });
