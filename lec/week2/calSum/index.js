@@ -16,8 +16,15 @@ function calculateSum(count){
 function handleFirstRequest(req, res){
     let calculatedSum = calculateSum(100);
     // let ans = `calculated sum is ${calculatedSum}`
+<<<<<<< HEAD:lec/week2/calSum/index.js
     
     res.send(calculatedSum.toString())
+=======
+    res.send(calculatedSum.toString())
+
+    // since return from calculateSum will be in integer so it is being mistakenly interpreted as a status code. so we need to convert it in string
+    // res.send(calculatedSum)
+>>>>>>> 56dafdb2bcb39190b37dc1e51ad66753556009c4:lec/week2/index.js
 }
 
 
