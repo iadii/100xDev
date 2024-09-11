@@ -12,7 +12,7 @@ const app = express();
 //     let wrongPlace = `
 //         <h3>
 //             either go to <a href="http://localhost:${myVariable}/huayra">http://localhost:${myVariable}/huayra</a>
-//             <b>or</b> ==AAAA===<a href="http://localhost:${myVariable}/z900">http://localhost:${myVariable}/z900</a>
+//             <b>or</b><a href="http://localhost:${myVariable}/z900">http://localhost:${myVariable}/z900</a>
 //         </h3>
 
 //     `

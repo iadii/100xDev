@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>My Services - Full Stack Developer</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Arial", sans-serif;
+        background-color: #121212;
+        color: #ddd;
+      }
+
+      .header {
+        background: url("https://source.unsplash.com/1600x900/?technology,night")
+          no-repeat center center/cover;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        text-align: center;
+      }
+
+      .navbar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 50px;
+        background: rgba(0, 0, 0, 0.7);
+      }
+
+      .logo {
+        font-size: 24px;
+        font-weight: bold;
+        color: #ff6b6b;
+      }
+
+      .nav-links {
+        list-style-type: none;
+        display: flex;
+        gap: 20px;
+      }
+
+      .nav-links li a {
+        color: #ddd;
+        text-decoration: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+      }
+
+      .nav-links li a:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+
+      .header-content h1 {
+        font-size: 48px;
+        margin-bottom: 20px;
+      }
+
+      .header-content p {
+        font-size: 18px;
+        margin-bottom: 30px;
+      }
+
+      .cta-button {
+        padding: 10px 20px;
+        background-color: #ff6b6b;
+        color: white;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .cta-button:hover {
+        background-color: #ff4747;
+      }
+
+      .services-section,
+      .portfolio-section {
+        padding: 50px;
+        text-align: center;
+        background-color: #181818;
+      }
+
+      .services-section h2,
+      .portfolio-section h2 {
+        font-size: 36px;
+        margin-bottom: 30px;
+        color: #ff6b6b;
+      }
+
+      .service {
+        margin-bottom: 30px;
+        padding: 20px;
+        background-color: #282828;
+        border-radius: 10px;
+      }
+
+      .service h3 {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+
+      .portfolio-gallery {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+      }
+
+      .portfolio-item {
+        width: 30%;
+        margin-bottom: 30px;
+      }
+
+      .portfolio-item img {
+        width: 100%;
+        border-radius: 10px;
+        margin-bottom: 10px;
+      }
+
+      .portfolio-item h4 {
+        font-size: 20px;
+      }
+
+      .footer {
+        padding: 20px;
+        text-align: center;
+        background-color: #333;
+        color: white;
+      }
+
+      .footer a {
+        color: #ff6b6b;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <div class="logo">Aditya's Dev Hub</div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-content">
+        <h1>Full Stack Development Services</h1>
+        <p>Creating beautiful, efficient, and user-centric websites</p>
+        <button class="cta-button" onclick="scrollToSection('services')">
+          Explore Services
+        </button>
+      </div>
+    </header>
+
+    <section id="services" class="services-section">
+      <h2>My Services</h2>
+      <div class="service">
+        <h3>Frontend Development</h3>
+        <p>
+          I craft visually appealing and responsive interfaces using HTML, CSS,
+          and JavaScript frameworks.
+        </p>
+      </div>
+      <div class="service">
+        <h3>Backend Development</h3>
+        <p>
+          Building robust backend architectures using Node.js, Express.js, and
+          databases like MongoDB and MySQL.
+        </p>
+      </div>
+      <div class="service">
+        <h3>Full Stack Solutions</h3>
+        <p>
+          Delivering full-stack solutions that ensure a seamless connection
+          between frontend and backend systems.
+        </p>
+      </div>
+      <div class="service">
+        <h3>API Development</h3>
+        <p>
+          Creating scalable and secure APIs for efficient data communication
+          between applications.
+        </p>
+      </div>
+    </section>
+
+    <section id="portfolio" class="portfolio-section">
+      <h2>My Portfolio</h2>
+      <div class="portfolio-gallery">
+        <div class="portfolio-item">
+          <img
+            src="https://source.unsplash.com/600x400/?website"
+            alt="Portfolio Website 1"
+          />
+          <h4>Portfolio Website 1</h4>
+          <p>Beautifully designed with modern UI/UX principles.</p>
+        </div>
+        <div class="portfolio-item">
+          <img
+            src="https://source.unsplash.com/600x400/?code"
+            alt="Portfolio Website 2"
+          />
+          <h4>Portfolio Website 2</h4>
+          <p>
+            A fast and reliable e-commerce platform built with full-stack
+            technologies.
+          </p>
+        </div>
+        <div class="portfolio-item">
+          <img
+            src="https://source.unsplash.com/600x400/?design"
+            alt="Portfolio Website 3"
+          />
+          <h4>Portfolio Website 3</h4>
+          <p>A minimalist and clean blog website.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer id="contact" class="footer">
+      <p>
+        Interested in working together? Reach out at
+        <a href="mailto:mishraaditya3456@gmail.com"
+          >mishraaditya3456@gmail.com</a
+        >
+      </p>
+    </footer>
+
+    <script>
+      function scrollToSection(sectionId) {
+        document.getElementById(sectionId).scrollIntoView({
+          behavior: "smooth",
+        });
+      }
+    </script>
+  </body>
+</html>

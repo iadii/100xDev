@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Beautiful Homepage</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Arial", sans-serif;
+        background-color: #121212;
+        color: #ddd;
+      }
+
+      .header {
+        background: url("https://source.unsplash.com/1600x900/?night,city")
+          no-repeat center center/cover;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+
+      .navbar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 50px;
+        background: rgba(0, 0, 0, 0.7);
+      }
+
+      .logo {
+        font-size: 24px;
+        font-weight: bold;
+        color: #ff6b6b;
+      }
+
+      .nav-links {
+        list-style-type: none;
+        display: flex;
+        gap: 20px;
+      }
+
+      .nav-links li a {
+        color: #ddd;
+        text-decoration: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+      }
+
+      .nav-links li a:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+
+      .header-content h1 {
+        font-size: 48px;
+        margin-bottom: 20px;
+      }
+
+      .header-content p {
+        font-size: 18px;
+        margin-bottom: 30px;
+      }
+
+      .cta-button {
+        padding: 10px 20px;
+        background-color: #ff6b6b;
+        color: white;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .cta-button:hover {
+        background-color: #ff4747;
+      }
+
+      .about-section,
+      .services-section {
+        padding: 50px;
+        text-align: center;
+        background-color: #181818;
+      }
+
+      .about-section h2,
+      .services-section h2 {
+        font-size: 36px;
+        margin-bottom: 20px;
+        color: #ff6b6b;
+      }
+
+      .services-section {
+        display: flex;
+        justify-content: space-around;
+        background-color: #202020;
+      }
+
+      .service {
+        width: 30%;
+        padding: 20px;
+        background-color: #282828;
+        border-radius: 10px;
+      }
+
+      .service h3 {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+
+      .footer {
+        padding: 20px;
+        text-align: center;
+        background-color: #333;
+        color: white;
+      }
+
+      .footer a {
+        color: #ff6b6b;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <div class="logo">MyWebsite</div>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a id="services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-content">
+        <h1>Welcome to My Beautiful Homepage</h1>
+        <p>Explore, connect, and experience elegance</p>
+        <button class="cta-button" onclick="scrollToSection('about')">
+          Learn More
+        </button>
+      </div>
+    </header>
+
+    <section id="about" class="about-section">
+      <h2>About Us</h2>
+      <p>
+        We provide amazing services and experiences, helping you achieve your
+        goals with grace and style.
+      </p>
+    </section>
+
+    <section id="services" class="services-section">
+      <h2>Our Services</h2>
+      <div class="service">
+        <h3>Design</h3>
+        <p>We create stunning, user-friendly designs for your needs.</p>
+      </div>
+      <div class="service">
+        <h3>Development</h3>
+        <p>Our development team builds reliable and scalable applications.</p>
+      </div>
+      <div class="service">
+        <h3>Marketing</h3>
+        <p>We offer digital marketing solutions to help you grow online.</p>
+      </div>
+    </section>
+
+    <footer id="contact" class="footer">
+      <p>
+        Get in touch with us at
+        <a href="mailto:info@mywebsite.com">info@mywebsite.com</a>
+      </p>
+    </footer>
+
+    <script>
+      function scrollToSection(sectionId) {
+        document.getElementById(sectionId).scrollIntoView({
+          behavior: "smooth",
+        });
+      }
+
+      const service = document.querySelector('#services')
+      service.addEventListener('click', (e) => {
+
+        e.preventDefault();
+        window.location.href = 'http://localhost:3000/service';
+      })
+    </script>
+  </body>
+</html>
