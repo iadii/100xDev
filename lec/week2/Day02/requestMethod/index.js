@@ -1,7 +1,7 @@
 const exp = require('express');
 const app = exp();
 
-
+app.use(exp.json());
 const calcy = (num) => {
     let sum = 0;
     for(let i = 1; i <= num; i++){
@@ -20,7 +20,7 @@ app.post('/', (req, res) => {
 // i. header 
 // ii. body
 app.post('/body', (req, res) => {
-    let count = req.body;
+    let count = parseInt(req.body.count);
     let cal = calcy(count);
     res.send(cal.toString())
 })
