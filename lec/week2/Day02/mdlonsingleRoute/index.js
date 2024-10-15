@@ -11,8 +11,16 @@ app.post('/greet',(req, res) => {
     const name = req.body.name
     const greet = hh(name)
 
-    res.send(`congrats ${greet}`)
+    res.send(`Hola ${greet}`)
 })
+
+app.post('/ammy', (req, res) => {
+    const name = req.headers.name;
+    const greet = hh(name);
+
+    res.status(505)
+    res.send(`<html><body><h1>Hola!</h1><p>${greet}</p></body></html>`);
+});
 
 app.post('/adii', bodyParser.json(), (req, res) => {
     const name = req.body.name
