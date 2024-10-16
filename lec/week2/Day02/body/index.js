@@ -15,10 +15,20 @@ const handleSum = (num) => {
 
 app.post('/handleSum', (req, res) => {
     const count = req.body.count
-    console.log(req.body);
-    let ans = handleSum(count);
+    if(typeof count === 'number'){
+        console.log(req.body);
+        let ans = handleSum(count);
 
-    res.send(`sum of num is ${ans}`)
+        var ansObject = {
+            sum : ans
+        }
+        res.send(ansObject)
+        // res.send(`sum of num is ${ans}`)
+    }else{
+        res.status(404).send('you have sent wrong thing here, send number instead')
+    }
+    
+    // res.status(404).send(`sum of num is ${ans}`)
 })
 
 app.listen(port, ()=> {
