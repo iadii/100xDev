@@ -15,6 +15,7 @@ const handleSum = (num) => {
 
 app.post('/handleSum', (req, res) => {
     const count = req.body.count
+<<<<<<< HEAD
     if(typeof count === 'number'){
         console.log(req.body);
         let ans = handleSum(count);
@@ -29,8 +30,20 @@ app.post('/handleSum', (req, res) => {
     }
     
     // res.status(404).send(`sum of num is ${ans}`)
+=======
+    console.log(req.body);
+
+    if(typeof count === 'number'){
+
+        let ans = handleSum(count);
+
+        res.send(`Total sum is ${ans}`)
+    }else{
+        res.status(404).send(`sum of num is ${ans}`)
+    }
+>>>>>>> d19a250e0c8397044d720250a6965443a79c7073
 })
 
 app.listen(port, ()=> {
-
+    console.log(`App is listenng at http://localhost:${port}`)
 })
