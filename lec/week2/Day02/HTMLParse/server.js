@@ -17,11 +17,12 @@ const proFun = (num) => {
         pro = pro * i;
     }
     return pro;
-}
+} 
 
-app.post('/adii', (req, res) => {
+app.get('/adii', (req, res) => {
 
-    const num = req.body.num;
+    // const num = req.body.num;
+    const num = req.query.num;
     const valSum = sumFun(num);
     valPro = proFun(num)
 
@@ -55,6 +56,13 @@ app.get('/', (req, res) => {
     res.sendFile(__dirname + "/index.html")
 })
 
+
+app.get('/rndm', (req, res) => {
+    res.send({
+        "hello" : "shutup",
+        "adii" : "pooo"
+    })
+})
 app.listen(port, () => {
     console.log(`App is running at http://localhost:${port}`);
 })
