@@ -7,7 +7,7 @@ app.use(bodyParser.json());
 
 let todos = [];
 
-function findIndex(arr, id) {
+/* function findIndex(arr, id) {
   for (let i = 0; i < arr.length; i++) {
     if (arr[i].id === id) return i;
   }
@@ -20,7 +20,7 @@ function removeAtIndex(arr, index) {
     if (i !== index) newArray.push(arr[i]);
   }
   return newArray;
-}
+} */
 
 app.get('/todos', (req, res) => {
   res.json(todos);
