@@ -5,6 +5,7 @@ const PORT = process.env.PORT || 4002;
 
 // using this only 
 // we can catch whatever user send from body otherwise it will return 500(Internal Server Error)
+// we only use app.use() when we know that given middleware will be used in every routes
 app.use(express.json()); 
 app.use((req, res, next) => {
   const { username, password } = req.body;
