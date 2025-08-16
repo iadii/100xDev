@@ -3,6 +3,8 @@ const app = express();
 require("dotenv").config();
 const PORT = process.env.PORT || 4002;
 
+// using this only 
+// we can catch whatever user send from body otherwise it will return 500(Internal Server Error)
 app.use(express.json()); 
 app.use((req, res, next) => {
   const { username, password } = req.body;
@@ -18,7 +20,7 @@ app.use((req, res, next) => {
 
 // another way of writing middleware
 const kidneyMiddleWare = (req, res, next) => {
-  const { kidneyId } = req.query;
+  const { kidneyId } = req.body;
   if(!(kidneyId == 1 || kidneyId == 2)){
     res.status(403).json({
       msg : "Dude you can have only max two kidneys and least one kidney"
@@ -28,7 +30,7 @@ const kidneyMiddleWare = (req, res, next) => {
   next();
 }
 // it will go through both middlewares user auth and kidneyid middleware
-app.get('/kidneys',kidneyMiddleWare, (req, res) => {
+app.post('/kidneys',kidneyMiddleWare, (req, res) => {
   
   res.status(200).json({
     msg: "your Kidney is perfect",
@@ -36,7 +38,7 @@ app.get('/kidneys',kidneyMiddleWare, (req, res) => {
 })
 
 // it will check only user auth
-app.get('/heart', (req, res) => {
+app.post('/heart', (req, res) => {
   res.status(201).json({
     msg : "your heart is fine as fuck"
   })
