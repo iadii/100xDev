@@ -5,7 +5,6 @@ const PORT = process.env.PORT || 4002;
 
 // using this only 
 // we can catch whatever user send from body otherwise it will return 500(Internal Server Error)
-// 
 app.use(express.json()); 
 app.use((req, res, next) => {
   const { username, password } = req.body;
