@@ -33,7 +33,7 @@ app.get('/auth', (req, res) => {
 })
 
 app.use((err, req, res, next) => {
-  res.send(`internal server error`)
+  res.status(500).send(`internal server error`)
 })
 
 app.listen(PORT, () => {
