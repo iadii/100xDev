@@ -7,24 +7,26 @@ env.config();
 const PORT = process.env.PORT || 4002;
 
 const schema = zod.object({
-  username : zod.string(),
-  password : zod.string()
+  email : zod.string().email(),
+  password : zod.string().min(),
 });
 
 app.use(express.json());
 
 app.use((req, res, next) => {
   
-})
-
-app.post('/auth', (req, res) => {
+  const { username, password } = req.body;
   
-  
+  const validate = schema.safeParse()
   if (!validate.success) {
       res.status(400).json({ error: 'Invalid input, expected array of numbers.' });
       return
-    }
-  
+  }
+  next();
+})
+
+app.post('/auth', (req, res) => {
+  res.send(`auth is working fine`)
 })
 
 // app.use((err, req, res, next) => {
