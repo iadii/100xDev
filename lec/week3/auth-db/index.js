@@ -2,7 +2,8 @@ const express = require('express');
 const jwt = require('jsonwebtoken')
 const app = express()
 require('dotenv').config()
-const PORT = process.env.PORT
+// const PORT = process.env.PORT
+const PORT = 3000
 
 // it is server password, it is for to decrypt the user's password
 // as jwt requires a server password to decrypt 
