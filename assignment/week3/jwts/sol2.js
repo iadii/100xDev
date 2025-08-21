@@ -15,7 +15,6 @@ const validation = z.object({
     password: z.string().min(6)
 })
 
-
 app.post('/signup', (req, res) => {
     const result = validation.safeParse(req.body)
     if(!result.success){ 
