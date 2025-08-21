@@ -40,7 +40,7 @@ function userExists(username, password) {
    return userExists;
 }
 
-app.post("/signin", function (req, res) {
+app.post("/signup", function (req, res) {
 
   const { username, password } = req.body
 
@@ -50,7 +50,7 @@ app.post("/signin", function (req, res) {
     });
   }
 
-  var token = jwt.sign({ username: username }, jwtPassword);
+  const token = jwt.sign({ username: username }, jwtPassword);
   return res.json({
     token,
   });

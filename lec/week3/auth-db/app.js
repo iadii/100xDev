@@ -25,7 +25,7 @@ const signupSchema = z.object({
 
 app.post('/signup', async (req, res) => {
     try {
-        const { name, email, password } = signupSchema.parse(req.body);
+        const { name, email, password } = signupSchema.safeParse(req.body);
 
         const existingUser = await Users.findOne({ email: email });
         if (existingUser) {
