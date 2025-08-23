@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">count is 0 </button>
+</body>
+<script>
+    const btn = document.querySelector('#btn');
+
+    // here count is state variable (sort of)
+    let count = 0;
+    btn.addEventListener('click', () => {
+        count += 1;
+        btn.innerHTML = `count is ${count}`
+    })
+</script>
+</html>
