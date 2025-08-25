@@ -5,16 +5,22 @@ function App() {
 
   const [count, setCount] = useState(0);
 
-  console.log(count)
-  console.log(setCount)
-
-  function countIncreament(count){
-    return count + 1
-  }
 
   return (
     <div>
-        <button onClick={() => setCount(countIncreament)}> counter {count}</button>
+        <CustomButtom  count={count} setCount={setCount}/>
+    </div>
+  ) 
+}
+
+function CustomButtom(props){
+
+    function countIncreament(){
+        props.setCount( props.count + 1)
+  }
+  return (
+    <div>
+        <button onClick={countIncreament}> counter {props.count}</button>
     </div>
   ) 
 }
