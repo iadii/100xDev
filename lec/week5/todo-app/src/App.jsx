@@ -11,6 +11,8 @@ import "./App.css";
   }]
   }
  */
+
+  // any time parent gets re-render all of its children gets re -rendered
 function App() {
   const [todos, setTodos] = useState([
     {
