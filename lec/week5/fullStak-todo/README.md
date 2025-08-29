@@ -11,6 +11,6 @@ It has the following features-
 ### Initializing a backend of the project
 - put a package.json
 - ```npm init -y```
-
+ 
 - Download dependecies
-- ```npm i express cors dotenv mongoose jwtbody-parser ```
+- ```npm i express cors dotenv mongoose jwt ```
