@@ -1,31 +1,32 @@
 const express = require('express')
 const app = express();
 const cors = require('cors')
-const z = require('zod')
+const {createTodo, updatTodo} = require('./types')
 require('dotenv').config();
 const PORT = process.env.PORT || 4001;
 
 app.use(express.json());
 app.use(cors())
+
+
 // for posting todos
+app.post('/postTodo', async(req, res) => {
+    const createPayload = req.body;
+    const parsePayload = createTodo.safeParse() 
 
-const validateData = z.object({
-    name: z.string().max(10),
-    description: z.string()
-})
-const valiidateCompletion = z.object({
-    id: z.string()
-})
+    if(!parsePayload.success){
+        return res.status(411).json({
+            msg: 'you sent wrong input'
+        })
+    }
 
-app.post('/postTodo', (req, res) => {
-    const {name, description} = req.body;
-
-    res.status.json({
-        name: name,
-        description: description, 
+    console.log(parsePayload)
+    const newTodo = new todos({
+        title: parsePayload.title
     })
+    // put it in mongodb
 })
-
+  
 // for getting todos
 res.get('/todos', (req, res) => {
     res.send('hello')
