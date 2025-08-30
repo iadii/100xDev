@@ -7,7 +7,8 @@ export function Todo({ todos }) {
                 <h1>{todo.title}</h1>
                 <p>{todo.description}</p>
 
-                <button>{todo.completed == true? "completed" : "mark as completed"}</button>
+                <p>{todo.completed == true? "completed" : "not completed"}</p>
+                {/* <button>{todo.completed == true? "completed" : "mark as completed"}</button> */}
             </div>
             )
       })}
