@@ -9,12 +9,17 @@ function App() {
   // this sending way too much request to db
   // so this is very wrong way (it is sort of infinite loop)
   // so we should useEffect hook
-  
-  fetch('http://localhost:4002/todos')
-  .then(async (res) => {
-      const json = await res.json(); 
-      setTodos(json.todos)
-  })  
+
+  // fetch('http://localhost:4002/todos')
+  // .then(async (res) => {
+  //     const json = await res.json(); 
+  //     setTodos(json.todos)
+  // })  
+
+  axios.get('http://localhost:4002/todos')
+  .then((res) => {
+    setTodos(res.data.todos);
+  })
   return (
     <div>
           <CreateTodo />
