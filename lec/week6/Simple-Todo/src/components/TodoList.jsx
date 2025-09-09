@@ -24,8 +24,14 @@ export function TodoList() {
   }
   return (
     <>
-      {todo.map((item) => (
-        <Todo title={item.title} description={item.description} />
+      {todo.map((item, index) => (
+        <Todo
+          // Each child in a list should have a unique "key" prop.
+          // so thats why Key
+          key={index}
+          title={item.title}
+          description={item.description}
+        />
       ))}
       <button onClick={addTodo}>Add Todo</button>
     </>
