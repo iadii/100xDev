@@ -8,7 +8,7 @@ export function TodoList() {
       description: "Not Done",
     },
     {
-      title: "NV",
+      title: "NV", 
       description: "planning to go",
     },
   ]);
@@ -28,7 +28,7 @@ export function TodoList() {
         <Todo
           // Each child in a list should have a unique "key" prop.
           // so thats why Key
-          key={index}
+          key={index} 
           title={item.title}
           description={item.description}
         />
