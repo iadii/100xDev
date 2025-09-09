@@ -7,7 +7,7 @@ export function MessageButton() {
     "Moon paints silver on dreams",
     "Heart blooms in silent grace",
     "Soul dances with gentle breeze",
-    "Time fades, love's echo stays",
+    "Time fades, love's echo stays", 
   ];
   const [msg, setMsg] = useState([]);
 
