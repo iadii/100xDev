@@ -9,7 +9,7 @@ export function MessageButton() {
     "Soul dances with gentle breeze",
     "Time fades, love's echo stays", 
   ];
-  const [msg, setMsg] = useState([]);
+  const [msg, setMsg] = useState([]); 
 
   function updateMsg() {
     const randomIndex = Math.floor(Math.random() * arr.length);
