@@ -7,7 +7,7 @@ function App() {
 
   return (
   <>
-    <CardWrapper innerComponent={TextComponent}/>
+    <CardWrapper innerComponent={<TextComponent />}/>
   </>
   )
 }
