@@ -5,7 +5,6 @@ import { TextComponent } from "./components/TextComponent";
 import { ParagraphComponent } from "./components/ParagraphComponent";
 import { ChildrenWrapper } from "./components/ChildrenWrapper";
 
-
 function App() {
   return (
     <>
@@ -14,11 +13,25 @@ function App() {
       <CardWrapper innerComponent={<TextComponent />} />
       <CardWrapper innerComponent={<ParagraphComponent />} />
 
-{/* in real world we will write under component */}
-{/* in this wrapper there is inbuilt property of react called children */}
-{/* it will automatically calls whatever inside of that wrapper */}
+      {/* in real world we will write under component */}
+      {/* in this wrapper there is inbuilt property of react called children */}
+      {/* it will automatically calls whatever inside of that wrapper */}
+      <ChildrenWrapper>hii there</ChildrenWrapper>
+
+      {/* even we can put image, div or whatever */}
+
       <ChildrenWrapper>
-        hii there
+        <div>Hello</div>
+      </ChildrenWrapper>
+
+
+  {/* see we are putting image too here */}
+      <ChildrenWrapper>
+        <img
+          src="https://images.pexels.com/photos/7818294/pexels-photo-7818294.jpeg"
+          alt=""
+          style={{ width: "200px" }}
+        />
       </ChildrenWrapper>
     </>
   );
