@@ -6,10 +6,12 @@ export function TodoList() {
     {
       title: "DSA",
       description: "Not Done",
+      isDone: "true",
     },
     {
       title: "NV", 
       description: "planning to go",
+      isDone: "false",
     },
   ]);
 
@@ -19,6 +21,7 @@ export function TodoList() {
       {
         title: "Charlie anna",
         description: "cuteey",
+        isDone: "false",
       },
     ]);
   }
@@ -31,6 +34,7 @@ export function TodoList() {
           key={index} 
           title={item.title}
           description={item.description}
+          isDone={item.isDone}
         />
       ))}
       <button onClick={addTodo}>Add Todo</button>
