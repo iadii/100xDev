@@ -9,7 +9,7 @@ export function TodoList() {
       isDone: "true",
     },
     {
-      title: "NV", 
+      title: "Seattle", 
       description: "planning to go",
       isDone: "false",
     },
@@ -19,7 +19,7 @@ export function TodoList() {
     setTodo([
       ...todo,
       {
-        title: "Charlie anna",
+        title: "Charlie",
         description: "cuteey",
         isDone: "false",
       },
