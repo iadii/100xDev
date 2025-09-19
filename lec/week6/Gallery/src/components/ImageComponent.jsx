@@ -1,4 +1,4 @@
-function ImageComp({ src, width, style }) {
+export function ImageComp({ src, width, style }) {
   return (
     <img
       src={src}
@@ -9,5 +9,3 @@ function ImageComp({ src, width, style }) {
     />
   );
 }
-
-export default  ImageComp;

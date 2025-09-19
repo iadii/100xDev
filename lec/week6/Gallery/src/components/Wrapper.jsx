@@ -3,19 +3,33 @@ import { ImageComp } from "./ImageComponent";
 
 export function Wrapper() {
   return (
-    <>
-      <ImageWrap>
-        <ImageComp
-          src="https://images.pexels.com/photos/3508236/pexels-photo-3508236.jpeg"
-          width="300px"
-        />
-      </ImageWrap>
-      <ImageWrap>
-        <ImageComp
-          src="https://images.pexels.com/photos/3508236/pexels-photo-3508236.jpeg"
-          style={{ position: "relative", right: "0", width: "300px" }}
-        />
-      </ImageWrap>
-    </>
+    <div className="min-h-screen bg-gray-100 p-4">
+      <div className="grid grid-cols-2 grid-rows-2 h-screen gap-4">
+        <ImageWrap className="w-full h-full rounded-lg overflow-hidden shadow-lg">
+          <ImageComp
+            src="https://images.pexels.com/photos/1796705/pexels-photo-1796705.jpeg"
+            className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+          />
+        </ImageWrap>
+        <ImageWrap className="w-full h-full rounded-lg overflow-hidden shadow-lg">
+          <ImageComp
+            src="https://images.pexels.com/photos/1187911/pexels-photo-1187911.jpeg"
+            className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+          />
+        </ImageWrap>
+        <ImageWrap className="w-full h-full rounded-lg overflow-hidden shadow-lg">
+          <ImageComp
+            src="https://images.pexels.com/photos/2856012/pexels-photo-2856012.jpeg"
+            className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+          />
+        </ImageWrap>
+        <ImageWrap className="w-full h-full rounded-lg overflow-hidden shadow-lg">
+          <ImageComp
+            src="https://images.pexels.com/photos/29686519/pexels-photo-29686519.jpeg"
+            className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+          />
+        </ImageWrap>
+      </div>
+    </div>
   );
 }
