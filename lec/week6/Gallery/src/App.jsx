@@ -2,11 +2,10 @@ import './App.css'
 import { Wrapper } from './components/Wrapper'
 
 function App() {
-
   return (
-    <>
-      <Wrapper/>
-    </>
+    <div className="min-h-screen bg-black">
+      <Wrapper />
+    </div>
   )
 }
 
