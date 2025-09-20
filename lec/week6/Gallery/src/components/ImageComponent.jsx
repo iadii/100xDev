@@ -5,6 +5,7 @@ export function ImageComp({ src, width, style }) {
       width={width}
       style={style}
       alt="gallery-image"
+      className="rounded-2xl"
       loading="lazy"
     />
   );
