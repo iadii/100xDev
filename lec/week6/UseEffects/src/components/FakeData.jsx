@@ -13,7 +13,7 @@ export function Fake() {
   return (
     <div>
       {quotes.map((qt) => (
-        <Wrap>
+        <Wrap key={qt.id}>
           {/* <div>{qt.id}</div> */}
           <div>{qt.id}.)  {qt.quote} - {qt.author}</div> <br></br>
           {/* <div>{qt.author}</div> */}

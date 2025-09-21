@@ -1,4 +1,3 @@
-import './App.css'
 import { Wrap } from './components/Wrapper'
 import { Fake } from './components/FakeData'
 
