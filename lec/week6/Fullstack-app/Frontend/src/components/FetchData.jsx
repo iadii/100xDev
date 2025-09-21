@@ -19,8 +19,8 @@ export function Fetch(){
                     <div>{todo.description}</div>
                     <div>{todo.status}</div> */}
                     <div>{index+1}) {todo.title}</div>
-                    <div>description: {todo.description}</div>
-                    <div>status: {todo.status}</div> <br/>
+                    <div>Description: {todo.description}</div>
+                    <div>Status: {todo.status}</div> <br/>
                 </Wrap>
             ))}
         </div>
