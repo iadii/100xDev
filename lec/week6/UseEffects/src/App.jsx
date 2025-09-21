@@ -1,12 +1,13 @@
-import { useState } from 'react'
 import './App.css'
+import { Wrap } from './components/Wrapper'
+import { Fake } from './components/FakeData'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      
+      <Wrap>
+        <Fake />
+      </Wrap>
     </>
   )
 }
