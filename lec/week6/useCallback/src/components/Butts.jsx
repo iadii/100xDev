@@ -1,14 +1,14 @@
 import { useState, useEffect } from "react";
 import FetchData from "./FetchData"
 
-function Butt({children, onClick}) {
+function Butt() {
 
-  const [data, setData] = useState(0);
+  const [click, setClick] = useState(0);
 
 
   function adii(event) {
     const value = Number(event.target.innerText);
-    setData(value);
+    setClick(value);
   }
 
     return (
@@ -17,7 +17,8 @@ function Butt({children, onClick}) {
       <button onClick={adii}>2</button>
       <button onClick={adii}>3</button>
       <button onClick={adii}>4</button>
-      <FetchData index={data} />
+      click is {click}
+      <FetchData index={click -1} />
     </>
   );
 

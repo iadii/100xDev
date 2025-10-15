@@ -10,7 +10,11 @@ export default function FetchData({index}) {
         setSpell(json);
       });
   }, [index]);
-
+// if we give empty array in dependency array.
+// then useEffect will run only once when the component mounts.
+// if we give some variable in dependency array.
+// then useEffect will run only when that variable changes.
+// so when index is changing then useEffect is running.
   return (
     <div>
       {Array.isArray(spell) ? spell.map((sp) => (
