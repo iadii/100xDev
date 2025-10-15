@@ -1,12 +1,11 @@
 import Butt from "./components/butts";
-import FetchData from "./components/FetchData";
 
 function App() {
-  return(
+  return (
     <>
       <Butt />
     </>
-  )
+  );
 }
 
 export default App;

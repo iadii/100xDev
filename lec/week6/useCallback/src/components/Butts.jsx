@@ -1,30 +1,26 @@
 import { useState, useEffect } from "react";
-import FetchData from "./FetchData"
+import FetchData from "./FetchData";
 
 function Butt() {
-
   const [click, setClick] = useState(1);
-
 
   function adii(event) {
     const value = Number(event.target.innerText);
     setClick(value);
   }
 
-    return (
+  return (
     <>
       <button onClick={adii}>1</button>
       <button onClick={adii}>2</button>
       <button onClick={adii}>3</button>
       <button onClick={adii}>4</button>
       <button onClick={adii}>5</button>
-      <br/> <br/>
+      <br /> <br />
       click is {click}
-      <FetchData index={click -1} />
+      <FetchData index={click - 1} />
     </>
   );
-
 }
-
 
 export default Butt;
