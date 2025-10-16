@@ -37,7 +37,8 @@ export default function Memoise() {
     for(let i = 1; i <= Number(inputValue); i++){
       total += i;
     }
-    setCount(total)
+
+    return total
   }, [inputValue])
 
   // useMemo is better than useEffect here because:
@@ -59,7 +60,7 @@ export default function Memoise() {
           value={inputValue} 
       />
       <br />
-      <span>sum is {count}</span>
+      <span>sum is {memoAdi}</span>
       {/* increase counter by 1*/}
       <br /> <br />
       <button onClick={() => setCount(count + 1)}>Counter {count}</button>
