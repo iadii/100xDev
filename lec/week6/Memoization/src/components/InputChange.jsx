@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react";
 
-export default function InputChange({ index }) {
+export default function InputChange() {
   const [count, setCount] = useState(0);
   const [inputValue, setInputValue] = useState("");
-  const [sum, setSum] = useState(0);
 
   function inp(e) {
     const newValue = e.target.value;
@@ -14,12 +13,12 @@ export default function InputChange({ index }) {
     for(let i = 1; i <= Number(newValue); i++){
       total += i;
     }
-    setSum(total);
+    setCount(total);
   }
 
   return (
     <>
-      {/* take user input */}
+      {/* take user input */} 
       <input 
           type="number" 
           placeholder="Enter a number" 
@@ -27,7 +26,7 @@ export default function InputChange({ index }) {
           value={inputValue} 
       />
       <br />
-      <span>sum is {sum}</span>
+      <span>sum is {count}</span>
       {/* increase counter by 1*/}
       <br /> <br />
       <button onClick={() => setCount(count + 1)}>Counter {count}</button>
