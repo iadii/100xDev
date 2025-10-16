@@ -1,9 +1,9 @@
-import Butt from "./components/butts";
+import InputChange from "./components/InputChange";
 
 function App() {
   return (
     <>
-      <Butt />
+      <InputChange />
     </>
   );
 }
