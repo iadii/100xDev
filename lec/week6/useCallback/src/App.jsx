@@ -1,9 +1,9 @@
-import Butt from "./components/butts";
+import { Callback } from "./components/Callback";
 
 function App() {
   return (
     <>
-      <Butt />
+      <Callback />
     </>
   );
 }
