@@ -1,9 +1,8 @@
-import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Landing } from "./components/Landing";
 import Dashboard from "./components/Dashboard";
 
 function App() {
-  useNavigate
   return (
     <>
     <div style={{backgroundColor:"black", color:"whitesmoke"}}>
@@ -11,8 +10,14 @@ function App() {
       it will be at top at every route
     </div>
     <div>
-      <button onClick={() => {navigate}}>Land</button>
-      <button onClick={() => {navigate}}>Dash</button>
+      <button onClick={() => {
+        // if we are doing client side rendering
+        // this is not good way, every bundle(html,css,js) comes again when we click the button
+        // window.location.href ="/"
+      }}>Land</button>
+      <button onClick={() => {
+        // window.location.href ="/dashboard" 
+      }}>Dash</button>
     </div>
       <BrowserRouter>
         <Routes>
