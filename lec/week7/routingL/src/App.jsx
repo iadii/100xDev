@@ -1,10 +1,11 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Landing } from "./components/Landing";
+// import { Landing } from "./components/Landing";
 import { Appbar } from "./components/Appbar";
 // import Dashboard from "./components/Dashboard";
 // Routing  lazy loading for optimising page
 const Dashboard  = React.lazy(()  => import("./components/Dashboard"));
+const Landing  = React.lazy(()  => import("./components/Landing"));
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
     <div style={{backgroundColor:"black", color:"whitesmoke"}}>
       this is topbar 
       it will be at top at every route
-    </div>
+    </div>. 
     
       <BrowserRouter>
         <Appbar />
