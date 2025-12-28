@@ -1,20 +1,19 @@
-import React from "react";
+import { lazy } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 // import { Landing } from "./components/Landing";
 import { Appbar } from "./components/Appbar";
 // import Dashboard from "./components/Dashboard";
 // Routing  lazy loading for optimising page
-const Dashboard  = React.lazy(()  => import("./components/Dashboard"));
-const Landing  = React.lazy(()  => import("./components/Landing"));
+const Dashboard = lazy(() => import("./components/Dashboard"));
+const Landing = lazy(() => import("./components/Landing"));
 
 function App() {
   return (
     <>
-    <div style={{backgroundColor:"black", color:"whitesmoke"}}>
-      this is topbar 
-      it will be at top at every route
-    </div>. 
-    
+      <div style={{ backgroundColor: "black", color: "whitesmoke" }}>
+        this is topbar it will be at top at every route
+      </div>
+      .
       <BrowserRouter>
         <Appbar />
         <Routes>
