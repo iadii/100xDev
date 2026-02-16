@@ -11,4 +11,3 @@ function Callback() {
 }
 
 export { Callback };
-    
