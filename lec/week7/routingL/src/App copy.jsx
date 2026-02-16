@@ -9,7 +9,7 @@ function App() {
       this is topbar
       it will be at top at every route
     </div>
-    <div>
+    <div> 
       <button onClick={() => {
         // if we are doing client side rendering
         // this is not good way, every bundle(html,css,js) comes again when we click the button
