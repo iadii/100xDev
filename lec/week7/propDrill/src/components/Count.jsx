@@ -1,3 +1,5 @@
+import { Button } from "./Buttons"
+
 export function Count({count, setCount}){
     return(
         <div>
@@ -8,4 +10,4 @@ export function Count({count, setCount}){
             <Button count={count} setCount={setCount}/>
         </div>
     )
-}
+}  
