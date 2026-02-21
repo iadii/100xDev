@@ -9,7 +9,7 @@ const Dashboard = lazy(() => import("./components/Dashboard"));
 const Landing = lazy(() => import("./components/Landing"));
 
 function App() {
-  return ( 
+  return (
     <>
       <div style={{ backgroundColor: "black", color: "whitesmoke" }}>
         this is topbar it will be at top at every route
@@ -21,7 +21,7 @@ function App() {
           {/* lets suppose <Landing/> component is coming from backend and it is getting either not loading or loading slow */}
           {/* so fallback component under suspense will eb render in our loading... */}
           <Route path="/" element={<Suspense fallback={"loading..."}> <Landing /></Suspense>} />
-          <Route path="/dashboard" element={<Suspense fallback={"loading..."}> <Dashboard/></Suspense>} />
+          <Route path="/dashboard" element={<Suspense fallback={"loading..."}> <Dashboard /></Suspense>} />
         </Routes>
       </BrowserRouter>
     </>
