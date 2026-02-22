@@ -5,12 +5,7 @@ import { CountRenderer } from "./CountRenderer"
 export function Count({ count, setCount }) {
     return (
         <div>
-            {/* {count} */}
-
-            {/* wrap count renderer so no need to pass prop everywhere  */}
-            <countContext.Provider value={count}>
-                <CountRenderer setCount={setCount}/>
-            </countContext.Provider>
+            <CountRenderer />
             <Button count={count} setCount={setCount} />
         </div>
     )

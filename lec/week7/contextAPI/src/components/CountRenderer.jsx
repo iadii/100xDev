@@ -1,4 +1,5 @@
 import { useContext } from "react"
+import { countContext } from "./context"
 
 const CountRenderer = () => {
     const count = useContext(countContext)
