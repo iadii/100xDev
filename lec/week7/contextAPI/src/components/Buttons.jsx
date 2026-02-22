@@ -1,8 +1,8 @@
 import { useContext } from "react"
 import { countContext } from "./context"
 
-export function Button({setCount }) {
-    const count = useContext(countContext)
+export function Button() {
+    const {count, setCount} = useContext(countContext)
     return (
         <div>
             <button onClick={() => {
