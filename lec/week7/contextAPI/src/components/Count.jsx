@@ -9,7 +9,7 @@ export function Count({ count, setCount }) {
 
             {/* wrap count renderer so no need to pass prop everywhere  */}
             <countContext.Provider value={count}>
-                <CountRenderer />
+                <CountRenderer setCount={setCount}/>
             </countContext.Provider>
             <Button count={count} setCount={setCount} />
         </div>

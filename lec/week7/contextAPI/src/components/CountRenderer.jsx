@@ -1,5 +1,7 @@
+import { useContext } from "react"
+
 const CountRenderer = () => {
-    const count = 1
+    const count = useContext(countContext)
     return(
         <div>
             {count}
