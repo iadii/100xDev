@@ -1,13 +1,17 @@
 import { Button } from "./Buttons"
+import { countContext } from "./context"
+import { CountRenderer } from "./CountRenderer"
 
-export function Count({count, setCount}){
-    return(
+export function Count({ count, setCount }) {
+    return (
         <div>
-            {count}
+            {/* {count} */}
 
-            {/* this component(<Count />) does not need setCount */}
-            {/* but because of <Button /> setCount will need  setCount*/}
-            <Button count={count} setCount={setCount}/>
+            {/* wrap count renderer so no need to pass prop everywhere  */}
+            <countContext.Provider value={count}>
+                <CountRenderer />
+            </countContext.Provider>
+            <Button count={count} setCount={setCount} />
         </div>
     )
 }  
