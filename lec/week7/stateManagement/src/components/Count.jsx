@@ -4,7 +4,7 @@ import { countContext } from "./context"
 import { CountRenderer } from "./CountRenderer"
 
 export function Count() {
-    const {count, setCount} = useContext(countContext)
+    const count = 0;
 
     console.log("even though this is not using this count component stil rerender")
     console.log("this is problem of context api")
