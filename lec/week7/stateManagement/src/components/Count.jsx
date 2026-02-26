@@ -1,7 +1,6 @@
-import { useContext } from "react"
 import { Button } from "./Buttons"
-import { countContext } from "./context"
 import { CountRenderer } from "./CountRenderer"
+import { countAtom } from "../store/atoms/count"
 
 export function Count() {
     const count = 0;

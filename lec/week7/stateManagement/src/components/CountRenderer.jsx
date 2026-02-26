@@ -1,6 +1,5 @@
-import { useContext } from "react"
-import { countContext } from "./context"
 import { useRecoilValue } from "recoil";
+import { countAtom } from "../store/atoms/count";
 
 const CountRenderer = () => {
     const count = useRecoilValue(countAtom);

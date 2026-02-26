@@ -1,9 +1,8 @@
-import { useContext } from "react"
-import { countContext } from "./context"
 import { useRecoilState } from "recoil";
+import { countAtom } from "../store/atoms/count";
 
 export function Button() {
-    const [count, setCount]  = useRecoilState();
+    const [count, setCount]  = useRecoilState(countAtom);
     return (
         <div>
             <button onClick={() => {
