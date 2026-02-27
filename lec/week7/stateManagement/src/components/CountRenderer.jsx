@@ -4,12 +4,12 @@ import { evenOddSelector } from "../store/selectors/evenOddSelector";
 
 const CountRenderer = () => {
     const count = useRecoilValue(countAtom);
-    const result = useRecoilValue(evenOddSelector);
+    const isEven = useRecoilValue(evenOddSelector);
     return(
         <div>
             {count}
             <br/>
-            {result}
+            {isEven ? "Even" : null}
         </div>
     )
 }

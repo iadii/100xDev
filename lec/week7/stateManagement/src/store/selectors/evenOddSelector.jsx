@@ -6,10 +6,6 @@ export const evenOddSelector = selector({
   get: ({ get }) => {
     const count = get(countAtom);
 
-    if (count % 2 === 0) {
-      return "Even";
-    } else {
-      return "Odd";
-    }
+   return count % 2
   },
 });
