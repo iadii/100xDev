@@ -1,21 +1,11 @@
 import { atom } from "recoil";
 
-const networkAtom = atom({
+export const notifications = atom({
     key: "networkAtom",
-    default: 104
-})
-const jobsAtom = atom({
-    key: "jobsAtom",
-    default: 0
-})
-const notificationsAtom = atom({
-    key: "notificationsAtom",
-    default: 12
-})
-
-const messagingAtom = atom({
-    key: "messagingAtom",
-    default: 0
-})
-
-export { networkAtom, jobsAtom, messagingAtom, notificationsAtom }
+    default: {
+        network: 4, 
+        jobs: 6, 
+        messaging: 3, 
+        notifications: 3
+    }
+});
