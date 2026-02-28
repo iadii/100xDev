@@ -1,5 +1,5 @@
 import { useSetRecoilState } from "recoil"
-import { jobsAtom } from "../atoms"
+import { jobsAtom } from "../store/atoms/atoms"
 
 export function ButtonUpdator (){
     const setJobs = useSetRecoilState(jobsAtom)

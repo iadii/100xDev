@@ -18,6 +18,4 @@ const messagingAtom = atom({
     default: 0
 })
 
-
-
 export { networkAtom, jobsAtom, messagingAtom, notificationsAtom }

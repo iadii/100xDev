@@ -1,5 +1,4 @@
-import { RecoilRoot, useRecoilValue } from 'recoil'
-import { networkAtom } from './atoms'
+import { RecoilRoot } from 'recoil'
 import { MainApp } from './components/MainApp'
 
 
