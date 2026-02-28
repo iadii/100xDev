@@ -22,6 +22,7 @@ export function MainApp() {
             // if we want to update the value of something but not really want the value, we should use useSetRecoilState
             // since in buttonUpdator componenet we only update the count of jobs but not rendere there 
             // so we used useSetRecoilState
+            // for rendering only we are using useRecoilValue
             <ButtonUpdator />
 
             <button onClick={() => {
