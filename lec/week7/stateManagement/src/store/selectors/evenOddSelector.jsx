@@ -5,7 +5,6 @@ export const evenOddSelector = selector({
   key: "evenOddSelector",
   get: ({ get }) => {
     const count = get(countAtom);
-
-   return count % 2
+    return count % 2 === 0
   },
 });
