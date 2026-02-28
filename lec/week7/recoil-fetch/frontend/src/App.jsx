@@ -1,7 +1,5 @@
-
-import './App.css'
 import { RecoilRoot } from 'recoil'
-
+import { MainApp } from './components/MainApp'
 function App() {
   return <RecoilRoot>
     <MainApp />

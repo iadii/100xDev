@@ -1,4 +1,5 @@
 import { selector } from "recoil";
+import { notifications } from "../atoms/atoms";
 
 export const totalNotificationSelector = selector({
     key: "totalNotificationSelector",
