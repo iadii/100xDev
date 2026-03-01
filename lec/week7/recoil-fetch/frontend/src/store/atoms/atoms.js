@@ -18,6 +18,7 @@ export const notifications = atom({
     default: selector({
         key: "networkAtomSelector",
         get: async () => {
+            await new Promise(resolve => setTimeout(resolve, 5000));
             const res = await axios.get("http://localhost:4000/api/v1/notifications")
             return res.data
         }
