@@ -1,6 +1,7 @@
 import express from 'express'
 import cors from 'cors'
 import userRouter from './routes/users.routes.js'
+import healthRouter from './routes/health.routes.js'
 const app = express();
 
 
@@ -13,6 +14,7 @@ const prefix = '/api/v1'
 
 // auth
 app.use(`${prefix}/auth`, userRouter)
+app.use(`${prefix}/health`, healthRouter)
 
 
 
