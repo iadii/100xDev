@@ -49,7 +49,7 @@ const signup = async (req, res) => {
 
 const login = async (req, res) => {
   const { username, password } = req.body;
-   const { success } = signupSchema.safeParse({
+   const { success } = loginSchema.safeParse({
     username,
     password,
   });
