@@ -5,4 +5,5 @@ const router = express.Router()
 
 router.post('/register', signup)
 router.post('/login', login)
+router.put('/update-info', login)
 export default router;
