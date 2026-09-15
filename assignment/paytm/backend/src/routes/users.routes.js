@@ -1,5 +1,7 @@
 import express from 'express'
-import { login, signup, updateInfo } from '../controller/user.controller.js';
+import { login, signup } from '../controller/auth.controller.js';
+import { updateInfo } from '../controller/updateProfile.controller.js';
+
 const router = express.Router()
 
 
