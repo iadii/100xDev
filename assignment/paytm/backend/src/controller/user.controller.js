@@ -41,7 +41,8 @@ const signup = async (req, res) => {
       msg: "User already exist",
     });
   }
-  const hashedPassword = await bcrypt.hash(password, 10);
+  const saltRound = 10;
+  const hashedPassword = await bcrypt.hash(password, saltRound);
   const user = await User.create({
     username,
     password: hashedPassword,
@@ -101,7 +102,7 @@ const updateInfo = async (req, res) => {
   }
   const updateData = {};
   const { oldPassword, newPassword, firstName, lastName } = req.body();
-  const { success } = signupSchema.safeParse({
+  const { success } = updateInfoSchema.safeParse({
     oldPassword,
     newPassword,
     firstName,
@@ -126,4 +127,4 @@ const updateInfo = async (req, res) => {
     .select("-password");
 };
 
-export { signup, login, updateInfo};
+export { signup, login, updateInfo };
