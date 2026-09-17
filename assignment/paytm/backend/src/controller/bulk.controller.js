@@ -10,7 +10,7 @@ const bulkQuery = async (req, res) => {
           $regex: `^${filter}`,
           $options: "i",
         },
-      },
+      }, 
       {
         lastName: {
           // this will find those words from everywhere like user search ad
