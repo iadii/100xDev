@@ -1,6 +1,17 @@
 import mongoose, { Schema } from "mongoose";
+import { User } from "./users.models.js";
 
-const BankDetailSchema = new Schema({});
+const accountSchema = new Schema({
+  userId: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "User",
+    required: true,
+  },
+  balance: {
+    type: Number,
+    required: true,
+  },
+});
 
-const BankDetail = mongoose.model("User", BankDetailSchema);
-export { BankDetail };
+const Account = mongoose.model("Account", accountSchema);
+export { Account };
