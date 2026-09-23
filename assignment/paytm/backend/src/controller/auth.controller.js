@@ -1,4 +1,5 @@
 import { User } from "../models/users.models.js";
+import {Account} from "../models/bank.model.js"
 import { z } from "zod";
 import jwt from "jsonwebtoken";
 import bcrypt from "bcryptjs";
@@ -42,6 +43,13 @@ const signup = async (req, res) => {
     firstName,
     lastName,
   });
+  // first create a account when user signupa
+  // adding some money in newly created account
+  const userId = user._id;
+  await Account.create({
+    userId,
+    balance: 1 + Math.random() * 10000
+  })
 
   return res.status(201).json({
     msg: `User created successfully`,
